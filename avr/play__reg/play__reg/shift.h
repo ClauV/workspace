@@ -9,6 +9,9 @@
 #ifndef SHIFT_H_
 #define SHIFT_H_
 
+#include <util/delay.h>
+#include <avr/io.h>
+
 #define HC595_PORT   PORTC
 #define HC595_DDR    DDRC
 #define HC595_DS_POS PC0      //Data pin (DS) pin location
@@ -42,10 +45,12 @@ void shiftInit(shiftReg *handler, uint8_t DDR,uint8_t PORT,uint8_t DS,uint8_t ST
 // change data (DS)lines
 void HC595DataHigh(shiftReg *handler) {
 	handler->PORT |= (1<<handler->DS);
+	HC595_PORT |= (1 << handler->PORT);
 }
 
 void HC595DataLow(shiftReg *handler){
 	handler->PORT &= ~(1<<handler->DS);
+	HC595_PORT &= ~(1 << handler->PORT);
 } 
 //Sends a clock pulse on SH_CP line
 void shiftPulse(shiftReg *handler)
@@ -54,6 +59,7 @@ void shiftPulse(shiftReg *handler)
    
    handler->PORT|=(1<<handler->SH_CP);//HIGH
    handler->PORT &=(~(1<<handler->SH_CP));//LOW
+   HC595_PORT = handler->PORT;
 }
 //Sends a clock pulse on ST_CP line
 void shiftLatch(shiftReg *handler)
@@ -63,6 +69,7 @@ void shiftLatch(shiftReg *handler)
    _delay_loop_1(1);
    HC595_PORT &=(~(1<<handler->ST_CP));//LOW
    _delay_loop_1(1);
+   HC595_PORT = handler->PORT;
 }
 /*
 Main High level function to write a single byte to
@@ -76,11 +83,11 @@ Description:
    and then latched. The byte is then available on
    output line Q0 to Q7 of the HC595 IC.
 */
-void shiftWrite(shiftReg *handler, uint8_t data)
+void shiftWrite(shiftReg *handler, uint16_t data)
 {
    //Send each 8 bits serially
    //Order is MSB first
-   for(uint8_t i=0;i<8;i++)
+   for(uint8_t i=0;i<16;i++)
    {
       //Output the data on DS line according to the
       //Value of MSB
@@ -113,12 +120,14 @@ void Wait()
 }
 
 
-void clear(shiftReg *handler){
+void unClear(shiftReg *handler){
 	handler->PORT |= (1 << handler->MR);
+	 HC595_PORT = handler->PORT;
 }
 
-void unClear(shiftReg *handler){
+void clear(shiftReg *handler){
 	handler->PORT &= ~(1 << handler->MR);
+	 HC595_PORT = handler->PORT;
 }
 
 
