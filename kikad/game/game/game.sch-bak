@@ -1,0 +1,517 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny24A-MU U?
+U 1 1 5E099A48
+P 4500 1900
+F 0 "U?" H 3956 1946 50  0000 R CNN
+F 1 "ATtiny24A-MU" H 3956 1855 50  0000 R CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4500 1900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf" H 4500 1900 50  0001 C CNN
+	1    4500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5E09AA81
+P 2650 1050
+F 0 "BT?" H 2768 1146 50  0000 L CNN
+F 1 "Battery_Cell" H 2768 1055 50  0000 L CNN
+F 2 "" V 2650 1110 50  0001 C CNN
+F 3 "~" V 2650 1110 50  0001 C CNN
+	1    2650 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E09B60F
+P 4500 2900
+F 0 "#PWR?" H 4500 2650 50  0001 C CNN
+F 1 "GND" H 4505 2727 50  0000 C CNN
+F 2 "" H 4500 2900 50  0001 C CNN
+F 3 "" H 4500 2900 50  0001 C CNN
+	1    4500 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 850  2650 850 
+Wire Wire Line
+	4500 1000 2850 1000
+Wire Wire Line
+	2850 850  2850 1000
+$Comp
+L game:ledMAT U?
+U 1 1 5E0AC235
+P 6100 4400
+F 0 "U?" H 6100 5415 50  0000 C CNN
+F 1 "ledMAT" H 6100 5324 50  0000 C CNN
+F 2 "" H 5950 4500 50  0001 C CNN
+F 3 "" H 5950 4500 50  0001 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L game:ledMAT U?
+U 1 1 5E0ADB76
+P 6100 5650
+F 0 "U?" H 6100 6665 50  0000 C CNN
+F 1 "ledMAT" H 6100 6574 50  0000 C CNN
+F 2 "" H 5950 5750 50  0001 C CNN
+F 3 "" H 5950 5750 50  0001 C CNN
+	1    6100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L game:ledMAT U?
+U 1 1 5E0AE3FB
+P 4050 5650
+F 0 "U?" H 4050 6665 50  0000 C CNN
+F 1 "ledMAT" H 4050 6574 50  0000 C CNN
+F 2 "" H 3900 5750 50  0001 C CNN
+F 3 "" H 3900 5750 50  0001 C CNN
+	1    4050 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L game:ledMAT U?
+U 1 1 5E0AF03D
+P 4050 4400
+F 0 "U?" H 4050 5415 50  0000 C CNN
+F 1 "ledMAT" H 4050 5324 50  0000 C CNN
+F 2 "" H 3900 4500 50  0001 C CNN
+F 3 "" H 3900 4500 50  0001 C CNN
+	1    4050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2800 4500 2900
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0B7543
+P 1950 3950
+F 0 "U?" H 1950 4731 50  0000 C CNN
+F 1 "74HC595" H 1950 4640 50  0000 C CNN
+F 2 "" H 1950 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 1950 3950 50  0001 C CNN
+	1    1950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0BB138
+P 1950 5450
+F 0 "U?" H 1950 6231 50  0000 C CNN
+F 1 "74HC595" H 1950 6140 50  0000 C CNN
+F 2 "" H 1950 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 1950 5450 50  0001 C CNN
+	1    1950 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0BB361
+P 8350 3900
+F 0 "U?" H 8350 4681 50  0000 C CNN
+F 1 "74HC595" H 8350 4590 50  0000 C CNN
+F 2 "" H 8350 3900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 8350 3900 50  0001 C CNN
+	1    8350 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3550 2900 3550
+Wire Wire Line
+	2900 3550 2900 3650
+Wire Wire Line
+	2900 3650 3600 3650
+Wire Wire Line
+	3600 3750 2850 3750
+Wire Wire Line
+	2850 3750 2850 3650
+Wire Wire Line
+	2850 3650 2350 3650
+Wire Wire Line
+	2350 3750 2750 3750
+Wire Wire Line
+	2750 3750 2750 3850
+Wire Wire Line
+	2750 3850 3600 3850
+Wire Wire Line
+	3600 3950 2700 3950
+Wire Wire Line
+	2700 3950 2700 3850
+Wire Wire Line
+	2700 3850 2350 3850
+Wire Wire Line
+	2350 3950 2650 3950
+Wire Wire Line
+	2650 3950 2650 4050
+Wire Wire Line
+	2650 4050 3600 4050
+Wire Wire Line
+	3600 4150 2600 4150
+Wire Wire Line
+	2600 4150 2600 4050
+Wire Wire Line
+	2600 4050 2350 4050
+Wire Wire Line
+	2350 4150 2550 4150
+Wire Wire Line
+	2550 4150 2550 4250
+Wire Wire Line
+	2550 4250 3600 4250
+Wire Wire Line
+	3600 4350 2500 4350
+Wire Wire Line
+	2500 4350 2500 4250
+Wire Wire Line
+	2500 4250 2350 4250
+Wire Wire Line
+	2350 4450 2500 4450
+Wire Wire Line
+	2500 4450 2500 4750
+Wire Wire Line
+	2500 4750 1400 4750
+Wire Wire Line
+	1400 4750 1400 5050
+Wire Wire Line
+	1400 5050 1550 5050
+Wire Wire Line
+	2350 5050 2850 5050
+Wire Wire Line
+	2850 5050 2850 4900
+Wire Wire Line
+	2850 4900 3600 4900
+Wire Wire Line
+	3600 5000 2950 5000
+Wire Wire Line
+	2950 5000 2950 5150
+Wire Wire Line
+	2950 5150 2350 5150
+Wire Wire Line
+	2350 5250 3150 5250
+Wire Wire Line
+	3150 5250 3150 5100
+Wire Wire Line
+	3150 5100 3600 5100
+Wire Wire Line
+	3600 5200 3250 5200
+Wire Wire Line
+	3250 5200 3250 5350
+Wire Wire Line
+	3250 5350 2350 5350
+Wire Wire Line
+	2350 5450 3300 5450
+Wire Wire Line
+	3300 5450 3300 5300
+Wire Wire Line
+	3300 5300 3600 5300
+Wire Wire Line
+	3600 5400 3450 5400
+Wire Wire Line
+	3450 5400 3450 5550
+Wire Wire Line
+	3450 5550 2350 5550
+Wire Wire Line
+	2350 5650 3500 5650
+Wire Wire Line
+	3500 5650 3500 5500
+Wire Wire Line
+	3500 5500 3600 5500
+Wire Wire Line
+	3600 5600 3600 5750
+Wire Wire Line
+	3600 5750 2350 5750
+Wire Wire Line
+	1550 3850 1100 3850
+Wire Wire Line
+	1100 3850 1100 5350
+Wire Wire Line
+	1100 5350 1550 5350
+Wire Wire Line
+	1550 5650 1200 5650
+Wire Wire Line
+	1200 5650 1200 4150
+Wire Wire Line
+	1200 4150 1550 4150
+Wire Wire Line
+	1950 4850 900  4850
+Wire Wire Line
+	900  4850 900  3350
+Wire Wire Line
+	900  3350 1950 3350
+Wire Wire Line
+	1950 4650 1300 4650
+Wire Wire Line
+	1300 4650 1300 6150
+Wire Wire Line
+	1300 6150 1950 6150
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0BBCED
+P 8350 5450
+F 0 "U?" H 8350 6231 50  0000 C CNN
+F 1 "74HC595" H 8350 6140 50  0000 C CNN
+F 2 "" H 8350 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 8350 5450 50  0001 C CNN
+	1    8350 5450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3650 6950 3650
+Wire Wire Line
+	6950 3650 6950 3500
+Wire Wire Line
+	6950 3500 7950 3500
+Wire Wire Line
+	7950 3600 7050 3600
+Wire Wire Line
+	7050 3600 7050 3750
+Wire Wire Line
+	7050 3750 6550 3750
+Wire Wire Line
+	6550 3850 7150 3850
+Wire Wire Line
+	7150 3850 7150 3700
+Wire Wire Line
+	7150 3700 7950 3700
+Wire Wire Line
+	7950 3800 7300 3800
+Wire Wire Line
+	7300 3800 7300 3950
+Wire Wire Line
+	7300 3950 6550 3950
+Wire Wire Line
+	7950 3900 7450 3900
+Wire Wire Line
+	7450 3900 7450 4050
+Wire Wire Line
+	7450 4050 6550 4050
+Wire Wire Line
+	6550 4150 7550 4150
+Wire Wire Line
+	7550 4150 7550 4000
+Wire Wire Line
+	7550 4000 7950 4000
+Wire Wire Line
+	7950 4100 7650 4100
+Wire Wire Line
+	7650 4100 7650 4250
+Wire Wire Line
+	7650 4250 6550 4250
+Wire Wire Line
+	6550 4350 7800 4350
+Wire Wire Line
+	7800 4350 7800 4200
+Wire Wire Line
+	7800 4200 7950 4200
+Wire Wire Line
+	7950 5050 7600 5050
+Wire Wire Line
+	7600 5050 7600 4900
+Wire Wire Line
+	7600 4900 6550 4900
+Wire Wire Line
+	7950 5150 7500 5150
+Wire Wire Line
+	7500 5150 7500 5000
+Wire Wire Line
+	7500 5000 6550 5000
+Wire Wire Line
+	6550 5100 7350 5100
+Wire Wire Line
+	7350 5100 7350 5250
+Wire Wire Line
+	7350 5250 7950 5250
+Wire Wire Line
+	7950 5350 7250 5350
+Wire Wire Line
+	7250 5350 7250 5200
+Wire Wire Line
+	7250 5200 6550 5200
+Wire Wire Line
+	6550 5300 7150 5300
+Wire Wire Line
+	7150 5300 7150 5450
+Wire Wire Line
+	7150 5450 7950 5450
+Wire Wire Line
+	7950 5550 7050 5550
+Wire Wire Line
+	7050 5550 7050 5400
+Wire Wire Line
+	7050 5400 6550 5400
+Wire Wire Line
+	6550 5500 6950 5500
+Wire Wire Line
+	6950 5500 6950 5650
+Wire Wire Line
+	6950 5650 7950 5650
+Wire Wire Line
+	7950 5750 6850 5750
+Wire Wire Line
+	6850 5750 6850 5600
+Wire Wire Line
+	6850 5600 6550 5600
+Wire Wire Line
+	8350 4600 9200 4600
+Wire Wire Line
+	9200 4600 9200 6150
+Wire Wire Line
+	9200 6150 8350 6150
+Wire Wire Line
+	7950 4400 7850 4400
+Wire Wire Line
+	7850 4400 7850 4800
+Wire Wire Line
+	7850 4800 8850 4800
+Wire Wire Line
+	8850 4800 8850 5050
+Wire Wire Line
+	8850 5050 8750 5050
+Wire Wire Line
+	8750 5250 8950 5250
+Wire Wire Line
+	8950 5250 8950 3700
+Wire Wire Line
+	8950 3700 8750 3700
+Wire Wire Line
+	8750 5550 9100 5550
+Wire Wire Line
+	9100 5550 9100 4000
+Wire Wire Line
+	9100 4000 8750 4000
+Wire Wire Line
+	8750 4100 9350 4100
+Wire Wire Line
+	9350 4100 9350 5650
+Wire Wire Line
+	9350 5650 8750 5650
+Wire Wire Line
+	8750 5350 9600 5350
+Wire Wire Line
+	9600 5350 9600 3800
+Wire Wire Line
+	9600 3800 8750 3800
+Wire Wire Line
+	1550 3550 1250 3550
+Wire Wire Line
+	1250 3550 1250 1850
+Wire Wire Line
+	1250 1850 3200 1850
+Wire Wire Line
+	3200 1850 3200 1300
+Wire Wire Line
+	3200 1300 3800 1300
+Wire Wire Line
+	5250 1300 5100 1300
+Wire Wire Line
+	1550 3750 1200 3750
+Wire Wire Line
+	1200 3750 1200 1800
+Wire Wire Line
+	1200 1800 3150 1800
+Wire Wire Line
+	3150 1800 3150 1250
+Wire Wire Line
+	3800 750  5400 750 
+Wire Wire Line
+	5400 750  5400 1400
+Wire Wire Line
+	5400 1400 5100 1400
+Wire Wire Line
+	1550 4050 1150 4050
+Wire Wire Line
+	1150 4050 1150 1750
+Wire Wire Line
+	1150 1750 3100 1750
+Wire Wire Line
+	3100 1750 3100 1200
+Wire Wire Line
+	3100 1200 3700 1200
+Wire Wire Line
+	3700 1200 3700 650 
+Wire Wire Line
+	3700 650  5550 650 
+Wire Wire Line
+	5550 650  5550 1500
+Wire Wire Line
+	5550 1500 5100 1500
+Wire Wire Line
+	3800 750  3800 1300
+Wire Wire Line
+	3150 1250 3750 1250
+Wire Wire Line
+	3750 1250 3750 700 
+Wire Wire Line
+	3750 700  5250 700 
+Wire Wire Line
+	5250 700  5250 1300
+Wire Wire Line
+	8750 3500 8750 2550
+Wire Wire Line
+	8750 2550 5550 2550
+Wire Wire Line
+	5550 2550 5550 1600
+Wire Wire Line
+	5550 1600 5100 1600
+Wire Wire Line
+	8950 3700 8950 2450
+Wire Wire Line
+	8950 2450 5450 2450
+Wire Wire Line
+	5450 2450 5450 1700
+Wire Wire Line
+	5450 1700 5100 1700
+Connection ~ 8950 3700
+Wire Wire Line
+	9100 4000 9100 2350
+Wire Wire Line
+	9100 2350 5650 2350
+Wire Wire Line
+	5650 2350 5650 1800
+Wire Wire Line
+	5650 1800 5100 1800
+Connection ~ 9100 4000
+Wire Wire Line
+	900  3350 900  850 
+Wire Wire Line
+	900  850  2650 850 
+Connection ~ 900  3350
+Connection ~ 2650 850 
+Wire Wire Line
+	1300 4650 1300 1200
+Wire Wire Line
+	1300 1200 2650 1200
+Wire Wire Line
+	2650 1200 2650 1150
+Connection ~ 1300 4650
+Wire Wire Line
+	8350 3300 9350 3300
+Wire Wire Line
+	9800 3300 9800 4850
+Wire Wire Line
+	9800 4850 8350 4850
+Wire Wire Line
+	9350 3300 9350 600 
+Wire Wire Line
+	9350 600  2650 600 
+Wire Wire Line
+	2650 600  2650 850 
+Connection ~ 9350 3300
+Wire Wire Line
+	9350 3300 9800 3300
+$EndSCHEMATC
